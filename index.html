@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Clock - Sam Barrezueta</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.44/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>World Clock - Sam Barrezueta</title>
+
 </head>
 <body>
     <div class="container">
@@ -17,30 +20,30 @@
             <option value="Tokyo">Tokyo</option>
         </select>
 
-        <div class="city-wrapper">
+        <div class="city" id="guayaquil">
             <div>
-                <h2>Los Angeles</h2>
+                <h2>Guayaquil</h2>
             </div>
             <div>
-                <div class="time">8:43:15 PM</div>
+                <div class="time">8:43:15 <small>PM</small></div>
                 <div class="date">Sunday, 21 January, 2024</div>
             </div>
         </div>
-        <div class="city-wrapper">
+        <div class="city" id="london">
             <div>
                 <h2>London</h2>
             </div>
             <div>
-                <div class="time">8:43:15 PM</div>
+                <div class="time">8:43:15 <small>PM</small></div>
                 <div class="date">Sunday, 21 January, 2024</div>
             </div>
         </div>
-        <div class="city-wrapper">
+        <div class="city" id="sydney">
             <div>
                 <h2>Sydney</h2>
             </div>
             <div>
-                <div class="time">8:43:15 PM</div>
+                <div class="time">8:43:15 <small>PM</small></div>
                 <div class="date">Sunday, 21 January, 2024</div>
             </div>
         </div>

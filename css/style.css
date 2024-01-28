@@ -11,19 +11,23 @@ h2 {
 }
 select {
     width: 100%;
+    display: block;
+    border-radius: 4px;
+    padding: 4px;
 }
 
 
 .container {
     background-color: white;
     width: 50%;
-    padding: 20px 50px 20px 50px;
+    max-width: 400px;
+    padding: 30px;
     margin: 60px auto;
     border-radius: 15px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);;
 }
 
-.city-wrapper {
+.city {
     display: flex;
     margin: 10px 0;
     justify-content: space-between;
@@ -37,8 +41,13 @@ select {
     font-weight: bold;
 }
 
+.time small {
+    font-size: 18px;
+    vertical-align: middle;
+}
 .date {
-    font-size: 14px;
+    font-size: 12px;
+    opacity: 0.5;
 }
 footer {
     text-align: center;
