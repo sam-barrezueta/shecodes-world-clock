@@ -22,28 +22,31 @@ function updateTime() {
 }
 
 function updateCity(event) {
-    let cityTimeZone = event.target.value; 
-    if(cityTimeZone === "current") {
-        cityTimeZone = moment.tz.guess();
-    }    
-    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
-    let cityTime = moment().tz(cityTimeZone);
-    let citiesElement = document.querySelector("#cities");
 
-    citiesElement.innerHTML = `
-        <div class="city">
-            <div>
-                <h2>${cityName}</h2>
+    function updateTime() {
+        let cityTimeZone = event.target.value; 
+        if(cityTimeZone === "current") {
+            cityTimeZone = moment.tz.guess();
+        }    
+        let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+        let cityTime = moment().tz(cityTimeZone);
+        let citiesElement = document.querySelector("#cities");
+
+        citiesElement.innerHTML = `
+            <div class="city">
+                <div>
+                    <h2>${cityName}</h2>
+                </div>
+                <div>
+                    <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
+                    <div class="date">${cityTime.format("dddd, D MMMM, YYYY")}</div>
+                </div>
             </div>
             <div>
-                <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
-                <div class="date">${cityTime.format("dddd, D MMMM, YYYY")}</div>
-            </div>
-        </div>
-        <div>
-            <a href="https://sambarrezueta-world-clock.netlify.app/"><i class="fa-solid fa-arrow-left"></i> <small>Return to homepage</small></a>
-        </div>`;
-    
+                <a id="return-button" href="https://sambarrezueta-world-clock.netlify.app/"><small><i class="fa-solid fa-arrow-left"></i> Return to homepage</small></a>
+            </div>`;    
+    }
+        setInterval(updateTime,1000);
 }
 
 updateTime();
