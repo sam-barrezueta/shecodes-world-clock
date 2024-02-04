@@ -39,6 +39,9 @@ function updateCity(event) {
                 <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
                 <div class="date">${cityTime.format("dddd, D MMMM, YYYY")}</div>
             </div>
+        </div>
+        <div>
+            <a href="https://sambarrezueta-world-clock.netlify.app/"><i class="fa-solid fa-arrow-left"></i> <small>Return to homepage</small></a>
         </div>`;
     
 }
