@@ -19,6 +19,16 @@ function updateTime() {
         londonTimeElement.innerHTML = moment().tz("Europe/London").format("h:mm:ss [<small>]A[</small]");
     }
 
+    //Sydney
+    let sydneyElement = document.querySelector("#sydney");
+    if(sydneyElement) {
+        let sydneyDateElement = sydneyElement.querySelector(".date");
+        let sydneyTimeElement = sydneyElement.querySelector(".time");
+
+        sydneyDateElement.innerHTML = moment().tz("Australia/Sydney").format("dddd, D MMMM, YYYY");
+        sydneyTimeElement.innerHTML = moment().tz("Australia/Sydney").format("h:mm:ss [<small>]A[</small]");
+    }
+
 }
 
 function updateCity(event) {
